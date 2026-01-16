@@ -1,0 +1,8 @@
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+Daily Journal/**/*.md
+Work/**/*.md
+Health/**/*.md
+Meetings Today.md
+.DS_Store
+.claude/history/
