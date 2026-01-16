@@ -28,7 +28,7 @@ Claude analyzes the dictated content and automatically catalogs it in the right 
 → Claude adds the idea to the project file
 
 **You say:** "Update meetings"
-→ Claude reads the calendar and creates today's meeting list
+→ Claude reads the calendar (Outlook or macOS Calendar) and creates today's meeting list
 
 ## 📋 Prerequisites
 
@@ -154,9 +154,13 @@ Claude analyzes the dictated content and applies these rules:
 ### Special Command: Meetings
 
 When you say **"update meetings"**, Claude:
-1. Reads the macOS Calendar
+1. Reads your calendar (Microsoft Outlook or macOS Calendar)
 2. Extracts all today's meetings
 3. Creates/updates the `Meetings Today.md` file
+
+**Supported calendars:**
+- Microsoft Outlook (primary)
+- macOS Calendar (fallback)
 
 ## 🎨 Daily Note Template
 
@@ -233,18 +237,25 @@ Modify the shortcut in SuperWhisper → Preferences → Hotkey
 - Try dictating more explicitly ("task: do X" instead of "do X")
 
 ### Meetings don't update
-- Verify Calendar permissions: System Settings → Privacy → Automation
-- Make sure the script has calendar access
+- **For Outlook users:**
+  - Ensure Microsoft Outlook is installed and running
+  - Verify Outlook permissions: System Settings → Privacy & Security → Automation
+  - Grant Script Editor/Terminal access to Microsoft Outlook
+- **For macOS Calendar users:**
+  - Verify Calendar permissions: System Settings → Privacy → Automation
+  - Make sure the script has calendar access
 
 ## 📝 Limitations
 
-- **macOS only**: Calendar integration uses AppleScript
-- **Language-specific**: Optimized for English triggers (but customizable)
+- **macOS only**: Calendar integration uses AppleScript for both Outlook and macOS Calendar
+- **Language-specific**: Optimized for English and Italian triggers (but customizable)
 - **Internet connection**: Claude Code requires connection to work
+- **Calendar support**: Works with Microsoft Outlook (preferred) and macOS Calendar (fallback)
 
 ## 🔮 Future Ideas
 
 - [ ] Multi-language support
+- [x] Microsoft Outlook integration
 - [ ] Google Calendar integration
 - [ ] Customizable templates per note type
 - [ ] Automatic weekly summary export

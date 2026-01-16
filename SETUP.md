@@ -214,7 +214,9 @@ System Settings → Privacy & Security → Accessibility
 ```
 System Settings → Privacy & Security → Automation
 → SuperWhisper → Terminal ✓
-→ SuperWhisper → Calendar ✓ (per aggiornamento meetings)
+→ SuperWhisper → Calendar ✓ (if using macOS Calendar)
+→ SuperWhisper → Microsoft Outlook ✓ (if using Outlook)
+→ Terminal → Microsoft Outlook ✓ (if using Outlook)
 ```
 
 ### Full Disk Access (se necessario)
@@ -283,6 +285,16 @@ bash ~/bin/whisper-to-claude.sh
 ### "Meetings non si aggiornano"
 
 ```bash
+# Per utenti Microsoft Outlook:
+# 1. Verifica che Outlook sia installato e in esecuzione
+# 2. Test AppleScript per Outlook
+osascript -e 'tell application "Microsoft Outlook" to get name of calendars'
+
+# Se non funziona, dai permessi:
+# System Settings → Privacy → Automation → Script Editor → Microsoft Outlook ✓
+# System Settings → Privacy → Automation → Terminal → Microsoft Outlook ✓
+
+# Per utenti macOS Calendar:
 # Test AppleScript per calendario
 osascript -e 'tell application "Calendar" to get name of calendars'
 

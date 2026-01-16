@@ -26,10 +26,23 @@ Se non rientra nelle categorie sopra
 ## Comando Speciale: "aggiorna meetings"
 
 Quando l'utente dice "aggiorna meetings":
-1. Leggi il calendario di oggi con:
+1. Leggi il calendario di oggi. Prova prima con Microsoft Outlook, poi con macOS Calendar se Outlook non è disponibile:
+
+**Per Microsoft Outlook:**
+```bash
+osascript -e 'tell application "Microsoft Outlook"' -e 'set today to current date' -e 'set tomorrow to today + 1 * days' -e 'set output to ""' -e 'set todayEvents to calendar events whose start time >= today and start time < tomorrow' -e 'repeat with evt in todayEvents' -e 'set timeStr to time string of (start time of evt)' -e 'set output to output & "- " & timeStr & " | " & subject of evt & linefeed' -e 'end repeat' -e 'return output' -e 'end tell'
+```
+
+**Per macOS Calendar (fallback):**
 ```bash
 osascript -e 'set today to current date' -e 'set tomorrow to today + 1 * days' -e 'set output to ""' -e 'tell application "Calendar"' -e 'repeat with cal in calendars' -e 'try' -e 'set todayEvents to (every event of cal whose start date >= today and start date < tomorrow)' -e 'repeat with evt in todayEvents' -e 'set timeStr to time string of start date of evt' -e 'set output to output & "- " & timeStr & " | " & summary of evt & linefeed' -e 'end repeat' -e 'end try' -e 'end repeat' -e 'end tell' -e 'return output'
 ```
+
+**Strategia di Fallback:**
+- Prima prova con Outlook (verifica se l'applicazione è in esecuzione)
+- Se Outlook non è disponibile o genera errori, usa macOS Calendar
+- Se nessuno dei due è disponibile, informa l'utente
+
 2. Scrivi il risultato in `Meetings Today.md`
 
 ## Struttura Vault
