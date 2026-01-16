@@ -16,6 +16,14 @@ This system allows you to:
 
 Claude analyzes the dictated content and automatically catalogs it in the right location in your Obsidian vault.
 
+## ⚠️ IMPORTANT
+You will give Claude access and read/write permissions on this Obsidian vault. 
+My advice is to use it as an experiment and test—do not insert sensitive personal or work-related important data. It's more for brainstorming and a way to keep track of ideas and tasks, habits and knowledge. 
+If you want to keep everything local, you can always replace Claude with a local model and not use Superwhisper.
+Also remember to keep operation confirmation enabled, because Claude could delete important things.
+
+(Of course, if you're already uploading your blood test results to the web version of Claude, then it's fine!)
+
 ## 🎯 Usage Examples
 
 **You say:** "I need to call Mark by Friday"
@@ -239,17 +247,15 @@ Modify the shortcut in SuperWhisper → Preferences → Hotkey
 ## 📝 Limitations
 
 - **macOS only**: Calendar integration uses AppleScript
-- **Language-specific**: Optimized for English triggers (but customizable)
+- **Language-specific**: Optimized for Italian / English triggers (but customizable)
 - **Internet connection**: Claude Code requires connection to work
 
 ## 🔮 Future Ideas
 
-- [ ] Multi-language support
+- [ ] AI-powered semantic search in notes
 - [ ] Google Calendar integration
 - [ ] Customizable templates per note type
 - [ ] Automatic weekly summary export
-- [ ] Todoist/Things integration
-- [ ] AI-powered semantic search in notes
 
 ## 📄 License
 
@@ -257,17 +263,9 @@ MIT License - Feel free to use, modify, and share!
 
 ## 🙏 Credits
 
+- **Medium Article** - [sonnyhuynhb](https://sonnyhuynhb.medium.com/i-built-an-ai-powered-second-brain-with-obsidian-claude-code-heres-how-b70e28100099)
 - **Obsidian** - [obsidian.md](https://obsidian.md/)
 - **SuperWhisper** - [superwhisper.com](https://superwhisper.com/)
 - **Claude** - [claude.ai](https://claude.ai/)
-
-## 💬 Support
-
-If you have questions or suggestions:
-- Open an Issue on GitHub
-- Contribute with a Pull Request
-- Share your setup!
-
----
 
 **Made with 🎙️ by Graziana**
