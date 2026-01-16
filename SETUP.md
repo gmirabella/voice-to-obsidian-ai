@@ -161,6 +161,21 @@ VaultObsidian/
 
 ## ✅ Test del Sistema
 
+### Test 0: Calendar Integration (New!)
+
+```bash
+# Test calendar integration (Outlook + macOS Calendar)
+cd "/path/to/VaultObsidian"
+bash scripts/test-calendar-integration.sh
+```
+
+This script will:
+- Check if Microsoft Outlook is installed and running
+- Test AppleScript access to Outlook
+- Test macOS Calendar as fallback
+- Display any meetings found for today
+- Provide troubleshooting guidance
+
 ### Test 1: Claude Code
 
 ```bash

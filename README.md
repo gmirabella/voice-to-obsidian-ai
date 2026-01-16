@@ -89,6 +89,12 @@ cd /path/to/VaultObsidian
 
 **Important:** The `CLAUDE.md` file in the vault root contains all cataloging rules. Claude automatically reads it when working in the vault.
 
+**Testing Calendar Integration:**
+```bash
+# Test your calendar setup (Outlook + macOS Calendar)
+bash scripts/test-calendar-integration.sh
+```
+
 ### 4. Helper Script (Optional but Recommended)
 
 Create a script to simplify SuperWhisper + Claude integration:
