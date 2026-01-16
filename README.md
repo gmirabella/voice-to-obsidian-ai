@@ -45,7 +45,7 @@ Important: Install and enable these Obsidian community plugins: Tasks, Templater
 
 ```bash
 # Clone this repository
-git clone https://github.com/yourusername/voice-to-obsidian.git
+git clone https://github.com/gmirabella/voice-to-obsidian-ai
 
 # Or download and copy files to your Obsidian vault
 ```
