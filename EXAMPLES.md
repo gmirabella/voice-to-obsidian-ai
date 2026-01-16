@@ -91,7 +91,7 @@ Questa guida mostra esempi pratici di come usare Voice-to-Obsidian.
 > "Aggiorna meetings"
 
 **Claude esegue:**
-1. Legge il calendario macOS
+1. Legge il calendario (Microsoft Outlook o macOS Calendar)
 2. Estrae eventi di oggi
 
 **Risultato in `Meetings Today.md`:**
@@ -103,6 +103,8 @@ Questa guida mostra esempi pratici di come usare Voice-to-Obsidian.
 - 14:30 | Sprint Planning
 - 16:00 | 1-on-1 con Manager
 ```
+
+**Nota:** Claude prova prima con Microsoft Outlook se disponibile, altrimenti usa macOS Calendar come fallback.
 
 ## 🎯 Casi d'Uso Avanzati
 
